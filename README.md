@@ -21,11 +21,10 @@ Therefore we try here to keep the code alive for many kernel versions as possibl
 
 Installation
 ============
-  * Driver package for Ubuntu: https://launchpad.net/~thopiekar/+archive/ubuntu/rcraid 
-    ```bash
-    sudo add-apt-repository ppa:thopiekar/rcraid
-    sudo apt-get update
-    sudo apt-get install rcraid-dkms
+  * Build driver for current kernel version
+    * download src
+    * run `./install`
+    * complete changes to switch away from AHCI mode before rebooting
     ```
   * Switching to RAID mode:
     * Boot Linux in AHCI mode.
@@ -37,6 +36,7 @@ Installation
 
 Thanks go to..
 ==============
+  * Thomas Pietrowski for his original source and help via email https://github.com/thopiekar/rcraid-dkms
   * To AMD to hand out the driver as source code at least. (Some history: Just think about Intel Poulsbo..)
     * https://www.amd.com/en/support/chipsets/amd-socket-am4/x370 - section Linux
   * To Martin Weber (@martinkarlweber) for sharing patches to make the driver work on Linux >= 4.15.x
